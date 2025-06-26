@@ -4,12 +4,11 @@ import 'package:flutter/material.dart';
 void main() => runApp(MessiahCafeApp());
 
 class MessiahCafeApp extends StatelessWidget {
-=======
+
 order
 void main() => runApp(const MyApp());
 
 void main() {
-master
   runApp(const MyApp());
 }
 master
@@ -17,6 +16,9 @@ master
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+ register
+
+ master
  master
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,23 @@ order
       home: AddOnScreen(),
       debugShowCheckedModeBanner: false,
     return MaterialApp(
+ register
+      debugShowCheckedModeBanner: false,
+      home: const RegistrationScreen(),
+    );
+  }
+}
+
+class RegistrationScreen extends StatelessWidget {
+  const RegistrationScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFF2C261), // Background color
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+
  INTERFACE
       title: 'Messiah Cafe',
       debugShowCheckedModeBanner: false,
@@ -239,8 +258,47 @@ class AddOnCard extends StatelessWidget {
       backgroundColor: Color(0xFFE9C46A),
       body: SafeArea(
      master
+master
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+ register
+            const SizedBox(height: 40),
+            // Logo (top-left)
+            SizedBox(
+              height: 40,
+              child: Image.asset('asset/logo.png'), // Add your logo to assets folder
+            ),
+            const SizedBox(height: 60),
+            // "Registration Form" Title (centered)
+            Center(
+              child: Column(
+                children: const [
+                  Text(
+                    'Registration',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.brown,
+                    ),
+                  ),
+                  Text(
+                    'Form',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.brown,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: SizedBox(
@@ -264,6 +322,7 @@ class AddOnCard extends StatelessWidget {
 
     ),
   );
+ master
  master
  master
 }

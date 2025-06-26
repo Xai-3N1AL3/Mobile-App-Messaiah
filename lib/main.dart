@@ -33,7 +33,7 @@ class AddOnScreen extends StatelessWidget {
                   Icon(Icons.arrow_back, size: 22),
                   SizedBox(width: 8),
                   Text(
-                    "Back to Menu",
+                    "Back to Menus",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,

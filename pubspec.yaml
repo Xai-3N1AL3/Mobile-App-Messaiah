@@ -19,5 +19,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+ register
 
 
+
+  assets:
+    - asset/logo.png
+master

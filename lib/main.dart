@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color(0xFFD3D3D3), // Light gray
-                  hintText: 'Enter your Username',
+                  hintText: 'Enter your username',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                     borderSide: BorderSide.none,

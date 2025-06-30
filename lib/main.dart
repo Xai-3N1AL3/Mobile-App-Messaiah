@@ -96,7 +96,7 @@ class AddOnScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              "₱260.00",
+              "₱270.00",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

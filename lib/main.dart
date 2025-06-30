@@ -25,7 +25,7 @@ class AddOnScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Back Button and Text
+            // Back Icon + Text
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
               child: Row(
@@ -33,7 +33,7 @@ class AddOnScreen extends StatelessWidget {
                   Icon(Icons.arrow_back, size: 22),
                   SizedBox(width: 8),
                   Text(
-                    "Back to Menu",
+                    "Back to Menus",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class AddOnScreen extends StatelessWidget {
               ),
             ),
 
-            // Food Card with Image + Text
+            // Icon Card Only
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
@@ -57,48 +57,18 @@ class AddOnScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Image
-                  ClipRRect(
-                    borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                    child: Image.asset(
-                      'assets/chaopan.jpg',
-                      height: 140,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  // Food Name and Price
-                  const Padding(
-                    padding: EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Chaopan Cordon Bleu",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "₱130.00",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+              height: 140,
+              width: double.infinity,
+              child: const Center(
+                child: Icon(
+                  Icons.restaurant_menu,
+                  size: 70,
+                  color: Colors.brown,
+                ),
               ),
             ),
 
-            // Add-On Cards
+            // Add-on Cards with Checkboxes Only
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
@@ -108,9 +78,9 @@ class AddOnScreen extends StatelessWidget {
               ),
               child: Column(
                 children: const [
-                  AddOnCard(title: "Extra-rice", price: 30.0),
-                  AddOnCard(title: "Coke", price: 20.0),
-                  AddOnCard(title: "Garlic mayo", price: 10.0),
+                  AddOnCard(),
+                  AddOnCard(),
+                  AddOnCard(),
                 ],
               ),
             ),
@@ -118,7 +88,7 @@ class AddOnScreen extends StatelessWidget {
         ),
       ),
 
-      // Add to Cart Bottom Bar
+      // Bottom Add to Cart Bar
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         color: const Color(0xFFD9D9D9),
@@ -151,40 +121,23 @@ class AddOnScreen extends StatelessWidget {
   }
 }
 
-// AddOn Card
 class AddOnCard extends StatelessWidget {
-  final String title;
-  final double price;
-
-  const AddOnCard({
-    super.key,
-    required this.title,
-    required this.price,
-  });
+  const AddOnCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 40,
       margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+      ),
       child: Row(
-        children: [
+        children: const [
           Checkbox(
-            value: false,
-            onChanged: (_) {},
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4),
-            ),
-          ),
-          Expanded(
-            child: Text(
-              title,
-              style: const TextStyle(fontSize: 14),
-            ),
-          ),
-          Text(
-            '₱${price.toStringAsFixed(2)}',
-            style: const TextStyle(fontSize: 14),
+            value: true,
+            onChanged: null, // Disabled for now
           ),
         ],
       ),

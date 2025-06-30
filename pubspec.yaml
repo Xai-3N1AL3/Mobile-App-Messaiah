@@ -20,8 +20,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
- LogIn
-    - assets/logo.png
 
-    - asset/logo.png
- master
+    - assets/
